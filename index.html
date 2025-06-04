@@ -16,6 +16,8 @@
     table { width: 80%; border-collapse: collapse; }
     th, td {border: 3px solid black;padding: 8px;text-align: center; /* Centra el texto */}
     th { background-color: #d3d3d3; /* Color de fondo para los encabezados */}
+    .image-row {display: flex;justify-content: center;align-items: center;gap: 20px; /* espacio entre imágenes */ }
+    .image-row img {width: 150px; /* ajusta según necesites */ height: auto;border-radius: 10px; /* opcional: bordes redondeados */}
 
 
 	
@@ -58,7 +60,13 @@
   
   <h2>Fee</h2>
   <p><strong>The conference fee includes accommodation and coffee break at the <a https://www.facebook.com/mansiondelreyantiguagt/" target="_blank">Hotel Mansion del Rey</a>, in Antigua, Guatemala</strong>, ensuring attendees have a comfortable stay while enjoying all events.</p>
-  <img src="Imgs/1habitacion.png" alt="Talks Image"><img src="Imgs/3habitacion.png" alt="Talks Image">
+  <body>
+    <div class="image-row">
+        <img src="Imgs/1habitacion.png" alt="Imagen 1">
+        <img src="Imgs/2habitacion.png" alt="Imagen 2">
+        <img src="Imgs/3habitacion.png" alt="Imagen 3">
+    </div>
+  </body>
   <table border="1">
 	<thead>
 		<tr>
