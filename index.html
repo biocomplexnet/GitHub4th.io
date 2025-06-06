@@ -12,164 +12,224 @@
     img { max-width: 100%; height: auto; margin: 20px 0; }
     ul { padding-left: 20px; }
     blockquote { border-left: 4px solid #ccc; padding-left: 10px; color: #555; }
-    section { margin-bottom: 40px; } 
+    section { margin-bottom: 40px; }
     table { width: 100%; border-collapse: collapse; }
-    th, td {border: 3px solid black;padding: 8px;text-align: center; /* Centra el texto */}
-    th { background-color: #d3d3d3; /* Color de fondo para los encabezados */}
-    /*.image-row {display: flex;justify-content: center;align-items: center;gap: 20px; /* espacio entre imágenes */ /*} */
-    /*.image-row img {width: 150px; /* ajusta según necesites */  /*height: auto;border-radius: 10px; /* opcional: bordes redondeados /*}*/
-    /*.image-row {display: flex;justify-content: center; align-items: center;gap: 50px; /* Espacio entre imágenes *//*margin-bottom: 20px; /* Espacio debajo de las imágenes */}
-    /*.image-row img {width: 300px;/* Ajusta según necesites */height: 200px; /* Ajusta según necesites */object-fit: cover;  /* Ajusta las imágenes para que se recorten y mantengan la proporción sin deformarse */border-radius: 10px;}
+    th, td { border: 3px solid black; padding: 8px; text-align: center; }
+    th { background-color: #d3d3d3; }
+    nav { margin-bottom: 20px; }
+    nav button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      cursor: pointer;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    nav button:hover { background-color: #005f99; }
+    .tab-content { background-color: #fff; padding: 20px; border-radius: 5px; display: none; }
+    .tab-content.active { display: block; }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to the 4th Summer Retreat on Bioinformatics and Complex Networks 2025!</h1>
+  <!-- NAVIGATION -->
+  <nav>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('shaday')">Pre-Retreat</button>
+    <button onclick="showTab('intro')">Retreat</button>
+  </nav>
 
-  <p>We are thrilled to announce that this year's event will take place from  <strong>July 13th to 19th, 2025</strong>. Join us at the pictures Colegio Mayor Santo Tomás de Aquino and Colegio La Salle, located in the beautiful and magical colonial city of Antigua, Guatemala.</p>
+  <!-- FIRST TAB: ORIGINAL CONTENT -->
+	<div id="home" class="tab-content active">
+		<h1>Welcome to the 4th Summer Retreat on Bioinformatics and Complex Networks 2025!</h1>
 
-  <img src="Imgs/6_4th_summer.png" alt="Summer Retreat Banner">
+		<img src="Imgs/6_4th_summer.png" alt="Summer Retreat Banner">
 
-  <p>The <strong>4th Summer Retreat on Bioinformatics and Complex Networks</strong> offers a unique, one-week experience filled with bioinformatics workshops, insightful talks, and extensive networking opportunities. The retreat focuses on a wide array of topics, including biological, computational, and mathematical fields, fostering a multidisciplinary dialogue.</p>
+		<p>The <strong>4th Summer Retreat on Bioinformatics and Complex Networks</strong> offers a unique, one-week experience filled with bioinformatics workshops, insightful talks, and extensive networking opportunities. The retreat focuses on a wide array of topics, including biological, computational, and mathematical fields, fostering a multidisciplinary dialogue.</p>
+		<p>This year the event is organized by the <a href="https://portal.cinvestav.mx/ira/investigacion/directorio-de-investigacion/dra-maribel-hern225ndez-rosales" target="_blank">Bioinformatics and Complex Networks Lab</a> at CINVESTAV Irapuato, Guanajuato; the <a href="https://cunzac.usac.edu.gt/" target="_blank">Centro Universitario de Zacapa</a>; and the <a href="https://usac.edu.gt/" target="_blank">Universidad de San Carlos de Guatemala </a> at Guatemala.</p>
+		<p>Take a glimpse into our previous retreats and stay updated by following us on X: <a href="https://twitter.com/BioinfoComplexN" target="_blank">@BioinfoComplexN</a></p>
+	    <p>We are thrilled to announce that this year's event will take place from <strong>July 13th to 19th, 2025</strong>, in the beautiful city of Antigua, Guatemala.</p>
+	    
+		<h2>2025 Organizing Committee</h2>
+			<h3>Bioinformatics and Complex Networks Lab, CINVESTAV UI</h3>
+				<ul>
+					<li>PhD Katia Aviña-Padilla</li>
+					<li>PhD Maribel Hernández-Rosales</li>
+					<li>PhD Elizabeth Cadenas-Castrejón</li>
+				</ul>
 
-  <p>This year the event is organized by the <a href="https://portal.cinvestav.mx/ira/investigacion/directorio-de-investigacion/dra-maribel-hern225ndez-rosales" target="_blank">Bioinformatics and Complex Networks Lab</a> at CINVESTAV Irapuato, Guanajuato; the <a href="https://cunzac.usac.edu.gt/" target="_blank">Centro Universitario de Zacapa</a>; and the <a href="https://usac.edu.gt/" target="_blank">Universidad de San Carlos de Guatemala </a> at Guatemala.</p>
+			<h3>Centro Universitario de Zacapa and the Universidad de San Carlos de Guatemala, Guatemala</h3>
+				<ul>
+					<li>PhD Manuel Alejandro Barrios-Izás</li>
+					<li>PhD Michelle Bustamante-Castillo</li>
+					<li>Eng. Iván Daniel Alvarado-Vargas</li>
+					<li>Estefany Nayeli Luarte-Franco</li>
+                </ul>
+	</div>
 
-  <p>Take a glimpse into our previous retreats and stay updated by following us on X: <a href="https://twitter.com/BioinfoComplexN" target="_blank">@BioinfoComplexN</a></p>
+  <!-- SECOND TAB: SHADAY GUERRERO PAGE -->
+	<div id="shaday" class="tab-content">
+		<iframe src="https://shadayguerrero.github.io/2025-07-10-usac/" style="width:100%; height:800px; border:none;"></iframe>
+	</div>
 
-  <h2>Location</h2>
-  <p>The event will take place at <a href="https://digeu.usac.edu.gt/colegio-mayor-santo-tomas-de-aquino/" target="_blank">Colegio Mayor Santo Tomás de Aquino</a>, <a href="https://maps.app.goo.gl/AZEs9TZQgJxnrDhi8" target="_blank">1a Avenida Nte 23, Antigua, Guatemala</a> and <a href="https://www.lasalleantigua.edu.gt/" target="_blank">Colegio La Salle</a>, <a href="https://maps.app.goo.gl/gaJunaSk4gWChmebA" target="_blank">26 Avenida Norte 4a, Antigua, Guatemala</a>. This beautiful colonial city enchants visitors with its monuments, museums, cathedrals, handicrafts, and natural beauties.</p>
+  <!-- THIRD TAB: SMALL INTRODUCTION -->
+	<div id="intro" class="tab-content">
+	<h1>Welcome to the 4th Summer Retreat on Bioinformatics and Complex Networks 2025!</h1>
+		<p>We are thrilled to announce that this year's event will take place from  <strong>July 13th to 19th, 2025</strong>. Join us at the Colegio Mayor Santo Tomás de Aquino and Colegio La Salle, located in the beautiful and magical colonial city of Antigua, Guatemala.</p>
 
-  <img src="Imgs/5_4th_summer.png" alt="Location Image">
+		<img src="Imgs/6_4th_summer.png" alt="Summer Retreat Banner">
 
-  <h2>Scientific Program & Workshops</h2>
-  <p>While it is not mandatory, it is highly encouraged for every participant to present their scientific projects. This event offers a unique opportunity to share your expertise and connect with like-minded individuals who are interested in your research areas. Engaging in these discussions can enhance your network and potentially lead to collaborative opportunities. Importantly, there is <strong>NO fee to attend/participate</strong> in any of the workshops or talks, or other sessions at the event, making it an even more accessible opportunity for all attendees.</p>
+		<p>The <strong>4th Summer Retreat on Bioinformatics and Complex Networks</strong> offers a unique, one-week experience filled with bioinformatics workshops, insightful talks, and extensive networking opportunities. The retreat focuses on a wide array of topics, including biological, computational, and mathematical fields, fostering a multidisciplinary dialogue.</p>
 
-  <h3>We offer two types of talks at the event:</h3>
-  <ul>
-    <li><strong>Light Talk</strong>: Consists of a 10-minute presentation followed by a 5-minute question-and-answer session.</li>
-    <li><strong>Keynote Talk (1 to 2 per day)</strong>: Features a 25-minute presentation with an additional 5 minutes for questions.</li>
-  </ul>
+		<p>This year the event is organized by the <a href="https://portal.cinvestav.mx/ira/investigacion/directorio-de-investigacion/dra-maribel-hern225ndez-rosales" target="_blank">Bioinformatics and Complex Networks Lab</a> at CINVESTAV Irapuato, Guanajuato; the <a href="https://cunzac.usac.edu.gt/" target="_blank">Centro Universitario de Zacapa</a>; and the <a href="https://usac.edu.gt/" target="_blank">Universidad de San Carlos de Guatemala </a> at Guatemala.</p>
 
-  <p>Participants are asked to provide a meaningful (preliminary) title during registration to facilitate the scheduling of talk sessions. To support the presentations, we will provide a video projector equipped with VGA and HDMI ports, as well as a laser pointer.</p>
+		<p>Take a glimpse into our previous retreats and stay updated by following us on X: <a href="https://twitter.com/BioinfoComplexN" target="_blank">@BioinfoComplexN</a></p>
 
-  <p><strong>Preliminary schedule</strong>: </p>
+		<h2>Location</h2>
+			<p>The event will take place at <a href="https://digeu.usac.edu.gt/colegio-mayor-santo-tomas-de-aquino/" target="_blank">Colegio Mayor Santo Tomás de Aquino</a>, <a href="https://maps.app.goo.gl/AZEs9TZQgJxnrDhi8" target="_blank">1a Avenida Nte 23, Antigua, Guatemala</a> and <a href="https://www.lasalleantigua.edu.gt/" target="_blank">Colegio La Salle</a>, <a href="https://maps.app.goo.gl/gaJunaSk4gWChmebA" target="_blank">26 Avenida Norte 4a, Antigua, Guatemala</a>. This beautiful colonial city enchants visitors with its monuments, museums, cathedrals, handicrafts, and natural beauties.</p>
+
+			<img src="Imgs/5_4th_summer.png" alt="Location Image">
+
+		<h2>Scientific Program & Workshops</h2>
+			<p>While it is not mandatory, it is highly encouraged for every participant to present their scientific projects. This event offers a unique opportunity to share your expertise and connect with like-minded individuals who are interested in your research areas. Engaging in these discussions can enhance your network and potentially lead to collaborative opportunities. Importantly, there is <strong>NO fee to attend/participate</strong> in any of the workshops or talks, or other sessions at the event, making it an even more accessible opportunity for all attendees.</p>
+
+			<h3>We offer two types of talks at the event:</h3>
+				<ul>
+					<li><strong>Light Talk</strong>: Consists of a 10-minute presentation followed by a 5-minute question-and-answer session.</li>
+					<li><strong>Keynote Talk (1 to 2 per day)</strong>: Features a 25-minute presentation with an additional 5 minutes for questions.</li>
+				</ul>
+
+				<p>Participants are asked to provide a meaningful (preliminary) title during registration to facilitate the scheduling of talk sessions. To support the presentations, we will provide a video projector equipped with VGA and HDMI ports, as well as a laser pointer.</p>
+
+				<p><strong>Preliminary schedule</strong>: </p>
   
-  <img src="Imgs/programa3.png" alt="Talks Image">
+				<img src="Imgs/programa3.png" alt="Talks Image">
   
   
-  <h2>Fee</h2>
-  <p><strong>The conference fee includes accommodation and coffee break at the <a href="https://www.facebook.com/mansiondelreyantiguagt/" target="_blank">Hotel Mansion del Rey</a>, <a href="https://maps.app.goo.gl/mJk5Hj1PTVFEjo8t5" target="_blank">4 Avenida Norte 24, Antigua Guatemala, Guatemala</a></strong>, ensuring attendees have a comfortable stay while enjoying all events. To make a reservation at the official hotel, please email us at: reservacionhoteloficial@gmail.com.</p>
-  <!--  <body>
-  <div class="image-row">
-        <img src="Imgs/1habitacion.png" alt="Imagen 1">
-        <img src="Imgs/2habitacion.png" alt="Imagen 2">
-        <img src="Imgs/3habitacion.png" alt="Imagen 3">
-    </div>
-  </body>-->
-  <img src="Imgs/habitaciones.png" alt="Talks Image">
-  <table border="1">
-	<thead>
-		<tr>
-		<th>Room capacity </th>
-		<th>Price per day p/p (Quetzales)</th>
-		<th>Whole week p/p (Quetzales)</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>A room,  one bed, 1 person </td>
-			<td>Q376 per night</td>
-			<td>Q2256 </td>
-		</tr>
-		<tr>
-			<td>Double room,  one bed, 2 people</td>
-			<td>Q200 per night</td>
-			<td>Q1200 </td>
-		</tr>
-		<tr>
-			<td>Triple room, 3 beds, 3 people</td>
-			<td>Q200 per night</td>
-			<td>Q1200</td>
-		</tr>		
-		<tr>
-			<td>Quadruple room, 2 bed, 4 people</td>
-			<td>Q200 per night</td>
-			<td>Q1200</td>
-		</tr>
-		<tr>
-			<td>Sextuple Room, 3 beds, 6 people</td>
-			<td>Q200 per night</td>
-			<td>Q1200</td>
-		</tr>
-		<tr>
-			<td>Sextuple Room, 6 beds, 6 people</td>
-			<td>Q200 per night</td>
-			<td>Q1200</td>
-		</tr>
-		<tr>
-			<td>Octople Room, 4 beds, 8 people</td>
-			<td>Q200 per night</td>
-			<td>Q1200</td>
-		</tr>
-	</tbody>
-  </table>
-  <p>Price may vary </p>
-  <img src="Imgs/mansion.png" alt="Talks Image">
+		<h2>Fee</h2>
+			<p><strong>The conference fee includes accommodation and coffee break at the <a href="https://www.facebook.com/mansiondelreyantiguagt/" target="_blank">Hotel Mansion del Rey</a>, <a href="https://maps.app.goo.gl/mJk5Hj1PTVFEjo8t5" target="_blank">4 Avenida Norte 24, Antigua Guatemala, Guatemala</a></strong>, ensuring attendees have a comfortable stay while enjoying all events. To make a reservation at the official hotel, please email us at: reservacionhoteloficial@gmail.com.</p>
+			<!--  <body>
+			<div class="image-row">
+				<img src="Imgs/1habitacion.png" alt="Imagen 1">
+				<img src="Imgs/2habitacion.png" alt="Imagen 2">
+				<img src="Imgs/3habitacion.png" alt="Imagen 3">
+			</div>
+			</body>-->
+			<img src="Imgs/habitaciones.png" alt="Talks Image">
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Room capacity </th>
+						<th>Price per day p/p (Quetzales)</th>
+						<th>Whole week p/p (Quetzales)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>A room,  one bed, 1 person </td>
+						<td>Q376 per night</td>
+						<td>Q2256 </td>
+					</tr>
+					<tr>
+						<td>Double room,  one bed, 2 people</td>
+						<td>Q200 per night</td>
+						<td>Q1200 </td>
+					</tr>
+					<tr>
+						<td>Triple room, 3 beds, 3 people</td>
+						<td>Q200 per night</td>
+						<td>Q1200</td>
+					</tr>		
+					<tr>
+						<td>Quadruple room, 2 bed, 4 people</td>
+						<td>Q200 per night</td>
+						<td>Q1200</td>
+		            </tr>
+					<tr>
+						<td>Sextuple Room, 3 beds, 6 people</td>
+						<td>Q200 per night</td>
+						<td>Q1200</td>
+					</tr>
+					<tr>
+						<td>Sextuple Room, 6 beds, 6 people</td>
+						<td>Q200 per night</td>
+						<td>Q1200</td>
+					</tr>
+					<tr>
+						<td>Octople Room, 4 beds, 8 people</td>
+						<td>Q200 per night</td>
+						<td>Q1200</td>
+					</tr>
+				</tbody>
+            </table>
+            <p>Price may vary </p>
+			
+            <img src="Imgs/mansion.png" alt="Talks Image">
   
-  <h3>Notes and Considerations:</h3>
-  <ul>
-    <li><strong>Attendance Flexibility</strong>: Attendance at the retreat for the entire week is optional. You may choose to attend for only one or two days if that is more convenient for you.</li>
-    <li><strong>Meals</strong>: Please note that meals (lunch and dinner) are not included in the program fee. While joint outings will be organized to facilitate group activities, you will be responsible for covering your own meal expenses during the program.</li>
-    <li><strong>Payment Details</strong>: After your registration, you will receive an email with payment details if you opt to stay at the recommended hotel.</li>
-    <li><strong>Refund Policy</strong>: The conference fee is refundable only if the registration is canceled by the end of the registration deadline on June 15th, as per email notification. After this date, payments are non-refundable.</li>
-    <li><strong>Travel</strong>: Attendees are responsible for making their own travel arrangements. At La Aurora International Airport in Guatemala City, several transportation options are available, including shuttles, taxis, and Uber.</li>
-    <li><strong>Accommodation options</strong>: While we have a recommended hotel, we understand that preferences vary, and you are welcome to consider any of the following hotels for your stay:
-       <ul>
-	    <li><a href="https://www.portahotelantigua.com/es" target="_blank">Hotel Porta</a></li>
-	    <!-- <li><a href="https://www.barcelo.com/es-mx/hoteles/barcelo/guatemala/" target="_blank">Hotel Barceló</a></li>-->
-	    <li><a href="https://www.mestizoantigua.com/" target="_blank">Mestizo Antigua</a></li>
-	    <li><a href="https://www.ciel-luxehotels.com/" target="_blank">Ciel Luxe Hotel</a></li>
-	    <li><a href="https://posadadelangel.com/" target="_blank">Posada del Ángel</a></li>
-	    <li><a href="https://www.casasantodomingo.com.gt/es" target="_blank">Museo SPA Casa Santo Domingo</a></li>
-	    <li><a href="https://www.caminorealantigua.com.gt/?utm_source=search&utm_medium=cpc&utm_campaign=caminorealantigua&utm_content=razones&gad_source=1&gad_campaignid=22243540318&gbraid=0AAAAA-2-JRc7I7jfHBrIL41v-JiL5e1uz&gclid=EAIaIQobChMI553Zg9TYjQMVYiRECB22PhWxEAMYASAAEgIcLvD_BwE" target="_blank">Camino Real Antigua Guatemala</a></li>
-	    <li><a href="https://antigua.posadadedonrodrigo.com/" target="_blank">Hotel Posada de Don Rodrigo</a></li>
-       </ul>
-    </li>  
-  </ul>
-  <p>However, we are here to assist you with any instructions or guidance you may need upon your arrival at the hotel. Please do not hesitate to reach out to us for assistance.</p>
+            <h3>Notes and Considerations:</h3>
+			  <ul>
+				<li><strong>Attendance Flexibility</strong>: Attendance at the retreat for the entire week is optional. You may choose to attend for only one or two days if that is more convenient for you.</li>
+				<li><strong>Meals</strong>: Please note that meals (lunch and dinner) are not included in the program fee. While joint outings will be organized to facilitate group activities, you will be responsible for covering your own meal expenses during the program.</li>
+				<li><strong>Payment Details</strong>: After your registration, you will receive an email with payment details if you opt to stay at the recommended hotel.</li>
+				<li><strong>Refund Policy</strong>: The conference fee is refundable only if the registration is canceled by the end of the registration deadline on June 15th, as per email notification. After this date, payments are non-refundable.</li>
+				<li><strong>Travel</strong>: Attendees are responsible for making their own travel arrangements. At La Aurora International Airport in Guatemala City, several transportation options are available, including shuttles, taxis, and Uber.</li>
+				<li><strong>Accommodation options</strong>: While we have a recommended hotel, we understand that preferences vary, and you are welcome to consider any of the following hotels for your stay:
+				   <ul>
+					<li><a href="https://www.portahotelantigua.com/es" target="_blank">Hotel Porta</a></li>
+					<!-- <li><a href="https://www.barcelo.com/es-mx/hoteles/barcelo/guatemala/" target="_blank">Hotel Barceló</a></li>-->
+					<li><a href="https://www.mestizoantigua.com/" target="_blank">Mestizo Antigua</a></li>
+					<li><a href="https://www.ciel-luxehotels.com/" target="_blank">Ciel Luxe Hotel</a></li>
+					<li><a href="https://posadadelangel.com/" target="_blank">Posada del Ángel</a></li>
+					<li><a href="https://www.casasantodomingo.com.gt/es" target="_blank">Museo SPA Casa Santo Domingo</a></li>
+					<li><a href="https://www.caminorealantigua.com.gt/?utm_source=search&utm_medium=cpc&utm_campaign=caminorealantigua&utm_content=razones&gad_source=1&gad_campaignid=22243540318&gbraid=0AAAAA-2-JRc7I7jfHBrIL41v-JiL5e1uz&gclid=EAIaIQobChMI553Zg9TYjQMVYiRECB22PhWxEAMYASAAEgIcLvD_BwE" target="_blank">Camino Real Antigua Guatemala</a></li>
+					<li><a href="https://antigua.posadadedonrodrigo.com/" target="_blank">Hotel Posada de Don Rodrigo</a></li>
+				   </ul>
+				</li>  
+			  </ul>
+            <p>However, we are here to assist you with any instructions or guidance you may need upon your arrival at the hotel. Please do not hesitate to reach out to us for assistance.</p>
 
-  <h2>Family</h2>
-  <p>Your family is welcome to join us in Antigua Guatemala! </p>
-  
-  <p>We recognize that family needs can vary, especially depending on the number of children involved. If it would be more convenient for you, we are fully prepared to arrange separate accommodations for families and individuals attending the sessions. If this applies to you, please notify the organizing committee, and we will provide personalized assistance to ensure comfort and satisfaction for you and your family during the event.</p>
+		<h2>Family</h2>
+		
+			<p>Your family is welcome to join us in Antigua Guatemala! </p>
+			  
+			<p>We recognize that family needs can vary, especially depending on the number of children involved. If it would be more convenient for you, we are fully prepared to arrange separate accommodations for families and individuals attending the sessions. If this applies to you, please notify the organizing committee, and we will provide personalized assistance to ensure comfort and satisfaction for you and your family during the event.</p>
 
-  
+        <h2>Registration Form</h2>
+			<p>Please <a href="https://docs.google.com/forms/d/1Vronk8H2uF9qJ60VLONHzZ-9LOm51B8j0lx4OLh_aUM/edit" target="_blank">fill out this form</a> to register your attendance.</p>
+			<p><strong>Deadline for registration: June 15th, 2025.</strong></p>
 
-  <h2>Registration Form</h2>
-  <p>Please <a href="https://docs.google.com/forms/d/1Vronk8H2uF9qJ60VLONHzZ-9LOm51B8j0lx4OLh_aUM/edit" target="_blank">fill out this form</a> to register your attendance.</p>
-  <p><strong>Deadline for registration: June 15th, 2025.</strong></p>
+		<h2>Further Information</h2>
+			<ul>
+				<li><strong>Payments</strong>: Hotel accepts credit/debit cards for dining expenses, including lunch and dinner. Additionally, we will provide an account number for those who wish to reserve their rooms in advance.</li>
+				<li><strong>Internet</strong>: WiFi is available throughout Hotel, although coverage may vary in different rooms.</li>
+			</ul>
 
-  <h2>Further Information</h2>
-  <ul>
-    <li><strong>Payments</strong>: Hotel accepts credit/debit cards for dining expenses, including lunch and dinner. Additionally, we will provide an account number for those who wish to reserve their rooms in advance.</li>
-    <li><strong>Internet</strong>: WiFi is available throughout Hotel, although coverage may vary in different rooms.</li>
-  </ul>
+		<h2>2025 Organizing Committee</h2>
+			<h3>Bioinformatics and Complex Networks Lab, CINVESTAV UI</h3>
+				<ul>
+					<li>PhD Katia Aviña-Padilla</li>
+					<li>PhD Maribel Hernández-Rosales</li>
+					<li>PhD Elizabeth Cadenas-Castrejón</li>
+				</ul>
 
-  <h2>2025 Organizing Committee</h2>
-  <h3>Bioinformatics and Complex Networks Lab, CINVESTAV UI</h3>
-  <ul>
-    <li>PhD Katia Aviña-Padilla</li>
-    <li>PhD Maribel Hernández-Rosales</li>
-    <li>PhD Elizabeth Cadenas-Castrejón</li>
-  </ul>
+			<h3>Centro Universitario de Zacapa and the Universidad de San Carlos de Guatemala, Guatemala</h3>
+				<ul>
+					<li>PhD Manuel Alejandro Barrios-Izás</li>
+					<li>PhD Michelle Bustamante-Castillo</li>
+					<li>Eng. Iván Daniel Alvarado-Vargas</li>
+					<li>Estefany Nayeli Luarte-Franco</li>
+			    </ul>
+  </div>
 
-  <h3>Centro Universitario de Zacapa and the Universidad de San Carlos de Guatemala, Guatemala</h3>
-  <ul>
-    <li>PhD Manuel Alejandro Barrios-Izás</li>
-    <li>PhD Michelle Bustamante-Castillo</li>
-    <li>Eng. Iván Daniel Alvarado-Vargas</li>
-    <li>Estefany Nayeli Luarte-Franco</li>
-  </ul>
-
+  <script>
+    function showTab(tabId) {
+      var tabs = document.getElementsByClassName('tab-content');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
